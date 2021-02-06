@@ -1,0 +1,883 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="output.css">
+  <title>Renovation Church</title>
+</head>
+
+<body class="antialiased">
+  <!--Navigation menu starts-->
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+    <div x-data="{ open: false }"
+      class="flex flex-col max-w-screen-xl px-0 mx-auto md:items-center md:justify-between md:flex-row">
+      <div class="flex flex-row items-center justify-between p-4">
+        <div class="pr-6">
+          <img src="/img/Correct R c Logo.png" alt="logo" style="height: 40; width: 40;">
+        </div>
+        <a href="index.html"
+          class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline active">Renovation
+          Church</a>
+        <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path x-show="!open" fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+            <path x-show="open" fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav :class="{'flex': open, 'hidden': !open}"
+        class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+        <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="imnew.html">I'm New</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="#">Ministries</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="preachings.html">Preachings</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="growth.html">Growth</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="#">About Us</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="contact.html">Contact</a>
+        <div @click.away="open = false" class="relative" x-data="{ open: false }">
+          <!-- <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"> -->
+        </div>
+    </div>
+    </nav>
+  </div>
+  </div>
+  <!--Navigation Menu ends-->
+  <!--Header with img-->
+  <div class="w-full bg-center bg-cover"
+    style="height:42rem; background-image: url(/img/alex-perri-bo1LQbaKcsE-unsplash.jpg)" ;>
+    <div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50">
+      <div class="text-center">
+        <h1 class="font-semibold text-white uppercase text-7xl">Renovation Church</h1>
+        <h3 class="pt-4 text-3xl italic font-semibold text-white">Building a relationship with the Lord leads to the
+          Renovation of our souls.</h3>
+        <!-- <button class="px-4 py-2 mt-4 text-sm font-medium text-white uppercase bg-blue-600 rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Where it all begins</button> -->
+      </div>
+    </div>
+  </div>
+  <!--Header with img ends-->
+
+
+
+  <!-- Intro video for the church sample-->
+  <div class="bg-gray-100 shadow-lg">
+    <div class="max-w-6xl px-8 py-16 mx-auto">
+      <div class="relative">
+        <div class="relative overflow-hidden rounded-lg shadow-2xl lg:flex" style="height: 360;">
+          <video class="w-full h-full object-over" autoplay loop muted>
+            <source src="/WORSHIP OPENER-xpgut32X0J8.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Section with video ends-->
+
+
+
+
+  <!--Sections with news/ events Starts-->
+  <div class="bg-gray-200">
+    <div class="max-w-6xl px-8 py-16 mx-auto">
+      <div class="relative">
+        <div class="relative overflow-hidden rounded-lg shadow-2xl lg:flex">
+          <div class="relative flex items-center justify-center h-56 lg:h-auto lg:w-5/12">
+            <img class="absolute object-cover w-full h-full" src="/img/photo-1595146767204-c9e2d9b76697.jpeg"
+              alt="masks at church" />
+          </div>
+          <div class="relative bg-white lg:w-7/12">
+            <svg class="absolute w-24 h-full -ml-12 text-white" fill="currentColor" viewBox="0 0 100 100"
+              preserveAspectRatio="none">
+              <polygon points="50,0 100,0 50,100 0,100" />
+            </svg>
+            <div class="relative px-8 py-12 leading-relaxed text-gray-700 lg:py-24 lg:px-16">
+              <p>
+                As <strong class="font-medium text-gray-900">Covid</strong> grows rapidly, using masks helps to scale
+                down exposure easily. &mdash; Here we support our fellow members by wearing masks while inside the
+                church building, separated at a safe distance.
+                As well as sanitizing the facilities after every service.</p>
+              <p class="mt-6">
+                <a href="https://www.facebook.com/pages/category/Church/Renovation-Church-101684038306141/" class="font-medium text-indigo-600 hover:text-indigo-900">Learn more about our events
+                  &rarr;</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sections with news/events Ends-->
+
+  <!---Preachings preview starts-->
+  <div class="container px-4 mx-auto my-12 md:px-12">
+    <div class="text-center">
+      <h1 class="text-xl font-semibold text-black uppercase md:text-2xl">Preachings</h1>
+    </div>
+    <div class="flex flex-wrap -mx-1 lg:-mx-4">
+
+      <!-- Column -->
+      <div class="w-full px-1 my-1 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+        <!-- Article -->
+        <article class="overflow-hidden transform rounded-lg shadow-lg hover:scale-105 motion-reduce:transform-none">
+
+          <a href="#">
+            <img alt="Placeholder" class="block w-full h-auto" src="https://picsum.photos/600/400/?random">
+          </a>
+
+          <header class="flex items-center justify-between p-2 leading-tight md:p-4">
+            <h1 class="text-lg">
+              <a class="text-black no-underline hover:underline" href="#">
+                Article Title
+              </a>
+            </h1>
+            <p class="text-sm text-grey-darker">
+              11/1/19
+            </p>
+          </header>
+
+
+        </article>
+        <!-- END Article -->
+
+      </div>
+      <!-- END Column -->
+
+      <!-- Column -->
+      <div class="w-full px-1 my-1 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+        <!-- Article -->
+        <article class="overflow-hidden transform rounded-lg shadow-lg hover:scale-105 motion-reduce:transform-none">
+
+          <a href="#">
+            <img alt="Placeholder" class="block w-full h-auto" src="https://picsum.photos/600/400/?random">
+          </a>
+
+          <header class="flex items-center justify-between p-2 leading-tight md:p-4">
+            <h1 class="text-lg">
+              <a class="text-black no-underline hover:underline" href="#">
+                Article Title
+              </a>
+            </h1>
+            <p class="text-sm text-grey-darker">
+              11/1/19
+            </p>
+          </header>
+
+        </article>
+        <!-- END Article -->
+
+      </div>
+      <!-- END Column -->
+
+      <!-- Column -->
+      <div class="w-full px-1 my-1 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+        <!-- Article -->
+        <article class="overflow-hidden transform rounded-lg shadow-lg hover:scale-105 motion-reduce:transform-none">
+
+          <a href="#">
+            <img alt="Placeholder" class="block w-full h-auto" src="https://picsum.photos/600/400/?random">
+          </a>
+
+          <header class="flex items-center justify-between p-2 leading-tight md:p-4">
+            <h1 class="text-lg">
+              <a class="text-black no-underline hover:underline" href="#">
+                Article Title
+              </a>
+            </h1>
+            <p class="text-sm text-grey-darker">
+              11/1/19
+            </p>
+          </header>
+
+
+        </article>
+        <!-- END Article -->
+
+      </div>
+      <!-- END Column -->
+
+      <!-- Column -->
+      <div class="w-full px-1 my-1 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+        <!-- Article -->
+        <article class="overflow-hidden transform rounded-lg shadow-lg hover:scale-105 motion-reduce:transform-none">
+
+          <a href="#">
+            <img alt="Placeholder" class="block w-full h-auto" src="https://picsum.photos/600/400/?random">
+          </a>
+
+          <header class="flex items-center justify-between p-2 leading-tight md:p-4">
+            <h1 class="text-lg">
+              <a class="text-black no-underline hover:underline" href="#">
+                Article Title
+              </a>
+            </h1>
+            <p class="text-sm text-grey-darker">
+              11/1/19
+            </p>
+          </header>
+
+
+        </article>
+        <!-- END Article -->
+
+      </div>
+      <!-- END Column -->
+
+      <!-- Column -->
+      <div class="w-full px-1 my-1 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+        <!-- Article -->
+        <article class="overflow-hidden transform rounded-lg shadow-lg hover:scale-105 motion-reduce:transform-none">
+
+          <a href="#">
+            <img alt="Placeholder" class="block w-full h-auto" src="https://picsum.photos/600/400/?random">
+          </a>
+
+          <header class="flex items-center justify-between p-2 leading-tight md:p-4">
+            <h1 class="text-lg">
+              <a class="text-black no-underline hover:underline" href="#">
+                Article Title
+              </a>
+            </h1>
+            <p class="text-sm text-grey-darker">
+              11/1/19
+            </p>
+          </header>
+
+
+
+        </article>
+        <!-- END Article -->
+
+      </div>
+      <!-- END Column -->
+
+      <!-- Column -->
+      <div class="w-full px-1 my-1 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+        <!-- Article -->
+        <article class="overflow-hidden transform rounded-lg shadow-lg hover:scale-105 motion-reduce:transform-none">
+
+          <a href="#">
+            <img alt="Placeholder" class="block w-full h-auto" src="https://picsum.photos/600/400/?random">
+          </a>
+
+          <header class="flex items-center justify-between p-2 leading-tight md:p-4">
+            <h1 class="text-lg">
+              <a class="text-black no-underline hover:underline" href="#">
+                Article Title
+              </a>
+            </h1>
+            <p class="text-sm text-grey-darker">
+              11/1/19
+            </p>
+          </header>
+
+
+        </article>
+        <!-- END Article -->
+
+      </div>
+      <!-- END Column -->
+
+    </div>
+    <p class="mt-6 text-center">
+      <a href="preachings.html" class="font-medium text-indigo-600 hover:text-indigo-900"> Experience More &rarr;</a>
+    </p>
+  </div>
+
+  <!----Preachings preview ends-->
+
+
+  <!--Ministries Start-->
+  <section class="text-gray-700 border-t border-gray-200 body-font">
+    <section class="container px-5 py-5 mx-auto">
+      <div class="pt-4 pb-8 text-center">
+      <h1 class="text-xl font-semibold text-black uppercase md:text-2xl">Ministries</h1>
+    </div>
+      <!-- <div class="flex flex-col flex-wrap items-center w-full mb-20 text-center">
+        <h1 class="mb-2 text-2xl font-medium text-gray-900 sm:text-3xl title-font">Ministries</h1>
+        <p class="w-full text-base leading-relaxed lg:w-1/2">Due to the current regulations we are following to keep
+          safe from Covid, some Ministries are not avaliable. Stay tuned for more to come through the year!</p>
+      </div>
+
+
+      <!--Card-->
+      <!-- <div class="flex flex-wrap -m-4">
+        <div class="p-4 xl:w-1/3 md:w-1/2">
+          <div class="p-6 border border-gray-300 rounded-lg">
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 mb-4 text-indigo-500 bg-indigo-100 rounded-full">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h2 class="mb-2 text-lg font-medium text-gray-900 title-font">Childrens</h2>
+            <p class="text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waist co, subway tile poke
+              farm.</p> -->
+      <!-- <section class="px-4 py-2 mt-2">
+                          <div class="flex items-center justify-between">
+                            <div class="flex items-center flex-1">
+                              <img
+                                class="object-cover h-10 rounded-full"
+                                src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+                                alt="Avatar"
+                              />
+                              <div class="flex flex-col mx-2">
+                                <a href="" class="font-semibold text-gray-700 hover:underline">
+                                  Dali Aquino
+                                </a>
+                              </div>
+                            </div>
+                            <div class="mt-1 text-xs text-gray-600 underline"> <a href="#">Click to find out more</a></div>
+                          </div>
+                        </section> -->
+      </div>
+      </div>
+      <!--Card-->
+
+
+      <!--Card-->
+      <!-- <div class="p-4 xl:w-1/3 md:w-1/2">
+          <div class="p-6 border border-gray-300 rounded-lg">
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 mb-4 text-indigo-500 bg-indigo-100 rounded-full">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-6 h-6" viewBox="0 0 24 24">
+                <circle cx="6" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+              </svg>
+            </div>
+            <h2 class="mb-2 text-lg font-medium text-gray-900 title-font">YTH</h2>
+            <p class="text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waist co, subway tile poke
+              farm.</p>
+          </div>
+        </div>
+        <!--Card-->
+
+      <!--Card-->
+      <!-- <div class="p-4 xl:w-1/3 md:w-1/2">
+          <div class="p-6 border border-gray-300 rounded-lg">
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 mb-4 text-indigo-500 bg-indigo-100 rounded-full">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h2 class="mb-2 text-lg font-medium text-gray-900 title-font">Serving</h2>
+            <p class="text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waist co, subway tile poke
+              farm.</p>
+          </div>
+        </div> -->
+      <!--Card-->
+
+      <!--Card-->
+      <!-- <div class="p-4 xl:w-1/3 md:w-1/2">
+          <div class="p-6 border border-gray-300 rounded-lg">
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 mb-4 text-indigo-500 bg-indigo-100 rounded-full">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
+              </svg>
+            </div>
+            <h2 class="mb-2 text-lg font-medium text-gray-900 title-font">Women's & Men's</h2>
+            <p class="text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waist co, subway tile poke
+              farm.</p>
+          </div>
+        </div> -->
+      <!--Card-->
+
+      <!--Card-->
+      <!-- <div class="p-4 xl:w-1/3 md:w-1/2">
+          <div class="p-6 border border-gray-300 rounded-lg">
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 mb-4 text-indigo-500 bg-indigo-100 rounded-full">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+              </svg>
+            </div>
+            <h2 class="mb-2 text-lg font-medium text-gray-900 title-font">LNF</h2>
+            <p class="text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waist co, subway tile poke
+              farm.</p>
+          </div>
+        </div> -->
+      <!--Card-->
+
+      <!--Card-->
+      <!-- <div class="p-4 xl:w-1/3 md:w-1/2">
+          <div class="p-6 border border-gray-300 rounded-lg">
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 mb-4 text-indigo-500 bg-indigo-100 rounded-full">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <span class="flex">
+              <h2 class="mb-2 text-lg font-medium text-gray-900 title-font">Arts & Creative Media</h2>
+            </span>
+            <p class="text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waist co, subway tile poke
+              farm.</p>
+          </div>
+        </div>
+      </div> -->
+      <!--card-->
+      <div class="container px-4 mx-auto">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 pt-6 text-center lg:pt-12 md:w-4/12">
+            <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg">
+              <div class="flex-auto px-4 py-5">
+
+                <div
+                  class="inline-flex items-center justify-center w-16 h-16 p-3 mb-5 text-center text-white bg-red-400 rounded-full shadow-lg">
+                  <img src="/img/children.jpg" alt=" Childrens photo"
+                    class="absolute items-stretch object-fill w-16 h-16 rounded-full">
+                </div>
+                <h6 class="text-xl font-semibold"><a href="#" class="hover:text-indigo-900">Childrens</a></h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                  Coming to church is a big step, come see when we hold
+                  service so we can get to know each other better.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 text-center md:w-4/12">
+            <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg">
+              <div class="flex-auto px-4 py-5">
+                <div
+                  class="inline-flex items-center justify-center w-16 h-16 p-3 mb-5 text-center text-white bg-blue-400 rounded-full shadow-lg">
+                  <img src="/img/youth.jpg" alt="youth photo"
+                    class="absolute items-stretch object-fill w-16 h-16 rounded-full">
+                </div>
+                <h6 class="text-xl font-semibold"><a href="#" class="hover:text-indigo-900">YTH</a></h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                  Community is important! It is why the lord calls us to
+                  cmmune together. Find a small group that works for you!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 pt-6 text-center md:w-4/12">
+            <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg">
+              <div class="flex-auto px-4 py-5">
+                <div
+                  class="inline-flex items-center justify-center w-16 h-16 p-3 mb-5 text-center text-white bg-green-400 rounded-full shadow-lg">
+                  <img src="/img/media.jpg" alt=" Creative Media and Arts photo "
+                    class="absolute items-stretch object-fill w-16 h-16 rounded-full">
+                </div>
+                <h6 class="text-xl font-semibold"><a href="#" class="hover:text-indigo-900">Creative Media & Arts</a>
+                </h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                  We have learned that doing things for the lord, for our
+                  community is one of the best ways to demonstrate God's work
+                  in us and the love he has for the rest of the world. Join an
+                  activy that you aling with best.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 pt-6 text-center lg:pt-12 md:w-4/12">
+            <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg">
+              <div class="flex-auto px-4 py-5">
+                <div
+                  class="inline-flex items-center justify-center w-16 h-16 p-3 mb-5 text-center text-white bg-red-400 rounded-full shadow-lg">
+                  <img src="/img/Men &Women.jpg" alt="Men and womens photo"
+                    class="absolute items-stretch object-fill w-16 h-16 rounded-full">
+                </div>
+                <h6 class="text-xl font-semibold"><a href="#" class="hover:text-indigo-900">Men's & Women's</a></h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                  Coming to church is a big step, come see when we hold
+                  service so we can get to know each other better.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 text-center md:w-4/12">
+            <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg">
+              <div class="flex-auto px-4 py-5">
+                <div
+                  class="inline-flex items-center justify-center w-16 h-16 p-3 mb-5 text-center text-white rounded-full shadow-lg">
+                  <img src="/img/LNF.jpg" alt="love never fails photo"
+                    class="absolute items-stretch object-fill w-16 h-16 rounded-full">
+                </div>
+                <h6 class="text-xl font-semibold"><a href="#" class="hover:text-indigo-900">LNF</a></h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                  Community is important! It is why the lord calls us to
+                  cmmune together. Find a small group that works for you!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 pt-6 text-center md:w-4/12">
+            <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-white rounded-lg shadow-lg">
+              <div class="flex-auto px-4 py-5">
+                <div
+                  class="inline-flex items-center justify-center w-16 h-16 p-3 mb-5 text-center text-white bg-green-400 rounded-full shadow-lg">
+                  <img src="/img/Usher.jpg" alt="Serivce photo" class="absolute object-fill w-16 h-16 rounded-full">
+                </div>
+                <h6 class="text-xl font-semibold"><a href="#" class="hover:text-indigo-900">Service</a></h6>
+                <p class="mt-2 mb-4 text-gray-600">
+                  We have learned that doing things for the lord, for our
+                  community is one of the best ways to demonstrate God's work
+                  in us and the love he has for the rest of the world. Join an
+                  activy that you aling with best.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Ministry link to see more-->
+      <p class="mt-6 text-center">
+        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-900"> See all of our Ministries &rarr;</a>
+      </p>
+    </section>
+
+    <!--Mnistries End-->
+    <!-- This is an example component -->
+    <!-- <section class="flex flex-row flex-wrap mx-auto"> -->
+    <!-- Card Component -->
+    <!-- <div class="flex w-full px-4 py-6 transition-all duration-150 md:w-1/2 lg:w-1/3">
+        <div
+          class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+          <div class="md:flex-shrink-0 place-self-center">
+            <img src="/img/alex-perri-bo1LQbaKcsE-unsplash copy.jpg" alt="Blog Cover"
+              class="items-center object-fill rounded-full md:h-52" />
+          </div>
+          <hr class="border-gray-300" />
+          <div class="flex flex-wrap items-center flex-1 px-2 py-1 mx-auto text-center">
+            <a href="#" class="hover:underline">
+              <h2 class="text-2xl font-bold tracking-normal text-gray-800">
+                Childrens or name of ministry
+              </h2>
+            </a>
+          </div>
+          <hr class="border-gray-300" />
+          <p class="flex flex-row flex-wrap w-full px-4 py-2 overflow-hidden text-sm text-justify text-gray-700">
+            (small Describtion) Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, magni
+            fugiat, odit incidunt necessitatibus aut nesciunt exercitationem aliquam
+            id voluptatibus quisquam maiores officia sit amet accusantium aliquid
+            quo obcaecati quasi.
+          </p>
+          <hr class="border-gray-300" />
+          <section class="px-4 py-2 mt-2">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center flex-1">
+                <img class="object-cover h-10 rounded-full"
+                  src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+                  alt="Avatar" />
+                <div class="flex flex-col mx-2">
+                  <a href="" class="font-semibold text-gray-700 hover:underline">
+                    Dali Aquino
+                  </a>
+                </div>
+              </div>
+              <div class="mt-1 text-xs text-gray-600 underline"> <a href="#">Click to find out more</a></div>
+            </div>
+          </section>
+        </div>
+      </div> -->
+    <!-- Card Component -->
+    <!-- Card Component -->
+    <!-- <div class="flex w-full px-4 py-6 transition-all duration-150 md:w-1/2 lg:w-1/3">
+        <div
+          class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+          <div class="md:flex-shrink-0">
+            <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover"
+              class="object-fill w-full rounded-lg rounded-b-none md:h-56" />
+          </div>
+          <hr class="border-gray-300" />
+          <div class="flex flex-wrap items-center flex-1 px-2 py-1 mx-auto text-center">
+            <a href="#" class="hover:underline">
+              <h2 class="text-2xl font-bold tracking-normal text-gray-800">
+                Childrens or name of ministry
+              </h2>
+            </a>
+          </div>
+          <hr class="border-gray-300" />
+          <p class="flex flex-row flex-wrap w-full px-4 py-2 overflow-hidden text-sm text-justify text-gray-700">
+            (small Describtion) Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, magni
+            fugiat, odit incidunt necessitatibus aut nesciunt exercitationem aliquam
+            id voluptatibus quisquam maiores officia sit amet accusantium aliquid
+            quo obcaecati quasi.
+          </p>
+          <hr class="border-gray-300" />
+          <section class="px-4 py-2 mt-2">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center flex-1">
+                <img class="object-cover h-10 rounded-full"
+                  src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+                  alt="Avatar" />
+                <div class="flex flex-col mx-2">
+                  <a href="" class="font-semibold text-gray-700 hover:underline">
+                    Dali Aquino
+                  </a>
+                </div>
+              </div>
+              <div class="mt-1 text-xs text-gray-600 underline"> <a href="#">Click to find out more</a></div>
+            </div>
+          </section>
+        </div>
+      </div> -->
+    <!-- Card Component -->
+    <!-- Card Component -->
+    <!-- <div class="flex w-full px-4 py-6 transition-all duration-150 md:w-1/2 lg:w-1/3">
+        <div
+          class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+          <div class="md:flex-shrink-0">
+            <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover"
+              class="object-fill w-full rounded-lg rounded-b-none md:h-56" />
+          </div>
+          <hr class="border-gray-300" />
+          <div class="flex flex-wrap items-center flex-1 px-2 py-1 mx-auto text-center">
+            <a href="#" class="hover:underline">
+              <h2 class="text-2xl font-bold tracking-normal text-gray-800">
+                Childrens or name of ministry
+              </h2>
+            </a>
+          </div>
+          <hr class="border-gray-300" />
+          <p class="flex flex-row flex-wrap w-full px-4 py-2 overflow-hidden text-sm text-justify text-gray-700">
+            (small Describtion) Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, magni
+            fugiat, odit incidunt necessitatibus aut nesciunt exercitationem aliquam
+            id voluptatibus quisquam maiores officia sit amet accusantium aliquid
+            quo obcaecati quasi.
+          </p>
+          <hr class="border-gray-300" />
+          <section class="px-4 py-2 mt-2">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center flex-1">
+                <img class="object-cover h-10 rounded-full"
+                  src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+                  alt="Avatar" />
+                <div class="flex flex-col mx-2">
+                  <a href="" class="font-semibold text-gray-700 hover:underline">
+                    Dali Aquino
+                  </a>
+                </div>
+              </div>
+              <div class="mt-1 text-xs text-gray-600 underline"> <a href="#">Click to find out more</a></div>
+            </div>
+          </section>
+        </div>
+      </div> -->
+    <!-- Card Component -->
+    <!-- Card Component -->
+    <!-- <div class="flex w-full px-4 py-6 transition-all duration-150 md:w-1/2 lg:w-1/3">
+        <div
+          class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+          <div class="md:flex-shrink-0">
+            <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover"
+              class="object-fill w-full rounded-lg rounded-b-none md:h-56" />
+          </div>
+          <hr class="border-gray-300" />
+          <div class="flex flex-wrap items-center flex-1 px-2 py-1 mx-auto text-center">
+            <a href="#" class="hover:underline">
+              <h2 class="text-2xl font-bold tracking-normal text-gray-800">
+                Childrens or name of ministry
+              </h2>
+            </a>
+          </div>
+          <hr class="border-gray-300" />
+          <p class="flex flex-row flex-wrap w-full px-4 py-2 overflow-hidden text-sm text-justify text-gray-700">
+            (small Describtion) Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, magni
+            fugiat, odit incidunt necessitatibus aut nesciunt exercitationem aliquam
+            id voluptatibus quisquam maiores officia sit amet accusantium aliquid
+            quo obcaecati quasi.
+          </p>
+          <hr class="border-gray-300" />
+          <section class="px-4 py-2 mt-2">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center flex-1">
+                <img class="object-cover h-10 rounded-full"
+                  src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+                  alt="Avatar" />
+                <div class="flex flex-col mx-2">
+                  <a href="" class="font-semibold text-gray-700 hover:underline">
+                    Dali Aquino
+                  </a>
+                </div>
+              </div>
+              <div class="mt-1 text-xs text-gray-600 underline"> <a href="#">Click to find out more</a></div>
+            </div>
+          </section>
+        </div>
+      </div> -->
+    <!-- Card Component -->
+    <!-- Card Component -->
+    <!-- <div class="flex w-full px-4 py-6 transition-all duration-150 md:w-1/2 lg:w-1/3">
+        <div
+          class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+          <div class="md:flex-shrink-0">
+            <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover"
+              class="object-fill w-full rounded-lg rounded-b-none md:h-56" />
+          </div>
+          <hr class="border-gray-300" />
+          <div class="flex flex-wrap items-center flex-1 px-2 py-1 mx-auto text-center">
+            <a href="#" class="hover:underline">
+              <h2 class="text-2xl font-bold tracking-normal text-gray-800">
+                Childrens or name of ministry
+              </h2>
+            </a>
+          </div>
+          <hr class="border-gray-300" />
+          <p class="flex flex-row flex-wrap w-full px-4 py-2 overflow-hidden text-sm text-justify text-gray-700">
+            (small Describtion) Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, magni
+            fugiat, odit incidunt necessitatibus aut nesciunt exercitationem aliquam
+            id voluptatibus quisquam maiores officia sit amet accusantium aliquid
+            quo obcaecati quasi.
+          </p>
+          <hr class="border-gray-300" />
+          <section class="px-4 py-2 mt-2">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center flex-1">
+                <img class="object-cover h-10 rounded-full"
+                  src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+                  alt="Avatar" />
+                <div class="flex flex-col mx-2">
+                  <a href="" class="font-semibold text-gray-700 hover:underline">
+                    Dali Aquino
+                  </a>
+                </div>
+              </div>
+              <div class="mt-1 text-xs text-gray-600 underline"> <a href="#">Click to find out more</a></div>
+            </div>
+          </section>
+        </div>
+      </div> -->
+    <!-- Card Component -->
+    <!-- Card Component -->
+    <!-- <div class="flex w-full px-4 py-6 transition-all duration-150 md:w-1/2 lg:w-1/3">
+        <div
+          class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+          <div class="md:flex-shrink-0">
+            <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover"
+              class="object-fill w-full rounded-lg rounded-b-none md:h-56" />
+          </div>
+          <hr class="border-gray-300" />
+          <div class="flex flex-wrap items-center flex-1 px-2 py-1 mx-auto text-center">
+            <a href="#" class="hover:underline">
+              <h2 class="text-2xl font-bold tracking-normal text-gray-800">
+                Childrens or name of ministry
+              </h2>
+            </a>
+          </div>
+          <hr class="border-gray-300" />
+          <p class="flex flex-row flex-wrap w-full px-4 py-2 overflow-hidden text-sm text-justify text-gray-700">
+            (small Describtion) Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, magni
+            fugiat, odit incidunt necessitatibus aut nesciunt exercitationem aliquam
+            id voluptatibus quisquam maiores officia sit amet accusantium aliquid
+            quo obcaecati quasi.
+          </p>
+          <hr class="border-gray-300" />
+          <section class="px-4 py-2 mt-2">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center flex-1">
+                <img class="object-cover h-10 rounded-full"
+                  src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+                  alt="Avatar" />
+                <div class="flex flex-col mx-2">
+                  <a href="" class="font-semibold text-gray-700 hover:underline">
+                    Dali Aquino
+                  </a>
+                </div>
+              </div>
+              <div class="mt-1 text-xs text-gray-600 underline"> <a href="#">Click to find out more</a></div>
+            </div>
+          </section>
+        </div>
+      </div> -->
+    <!-- Card Component -->
+    <!-- Card Component -->
+  </section>
+
+
+  <!--Footer Starts-->
+  <footer class="px-4 pt-12 pb-8 text-white bg-black">
+    <div class="container flex flex-col justify-between px-4 mx-auto overflow-hidden lg:flex-row">
+      <a href="/" class="block w-1/3 mr-4">
+        <img src="/img/Correct R c Logo.png" class="w-40 ml-4 lg:ml-0" alt="logo">
+      </a>
+      <div class="block w-2/3 mt-6 text-sm sm:flex lg:mt-0">
+        <ul class="flex flex-col w-full p-0 font-thin text-left text-gray-700 list-none">
+          <li class="inline-block px-3 py-2 font-medium tracking-wide text-white uppercase">Product</li>
+          <li><a href="#" class="inline-block px-3 py-2 text-gray-100 no-underline hover:text-white">Features</a></li>
+          <li><a href="#" class="inline-block px-3 py-2 text-gray-100 no-underline hover:text-white">Integrations</a>
+          </li>
+          <li><a href="#" class="inline-block px-3 py-2 text-gray-100 no-underline hover:text-white">Pricing</a></li>
+          <li><a href="#" class="inline-block px-3 py-2 text-gray-100 no-underline hover:text-white">FAQ</a></li>
+        </ul>
+        <ul class="flex flex-col w-full p-0 font-thin text-left text-gray-100 list-none">
+          <li class="inline-block px-3 py-2 font-medium tracking-wide text-white uppercase">Company</li>
+          <li><a href="#" class="inline-block px-3 py-2 text-gray-100 no-underline hover:text-white">Privacy</a>
+          </li>
+          <li><a href="#" class="inline-block px-3 py-2 text-gray-100 no-underline hover:text-white">Terms of
+              Service</a>
+          </li>
+        </ul>
+        <div class="flex flex-col w-full text-gray-100">
+          <div class="inline-block px-3 py-2 font-medium tracking-wide text-white uppercase">Follow Us</div>
+          <div class="flex justify-start pl-4 mt-2">
+            <a class="flex items-center block mr-6 text-gray-100 no-underline hover:text-white" href="#">
+              <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z" />
+              </svg>
+            </a>
+            <a class="flex items-center block mr-6 text-gray-100 no-underline hover:text-white" href="#">
+              <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z" />
+              </svg>
+            </a>
+            <a class="flex items-center block text-gray-100 no-underline hover:text-white" href="#">
+              <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pt-4 pt-6 mt-4 text-center text-gray-100 border-t border-gray-800"> © 2020 Renovation Church. All
+      rights reserved.
+    </div>
+  </footer>
+  <!--Footer Ends-->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/8.2.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/8.2.2/firebase-analytics.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+  <script src="/js/imnew.js"></script>
+</body>
+
+</html>
