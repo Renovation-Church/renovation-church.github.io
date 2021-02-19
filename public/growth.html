@@ -40,7 +40,7 @@
                     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                     href="growth.html">Growth Track</a>
                     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                    href="#">About Us</a>
+                    href="aboutus.html">About Us</a>
                     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                     href="contact.html">Contact</a>
                     <div @click.away="open = false" class="relative" x-data="{ open: false }">
@@ -52,26 +52,95 @@
     <!--Navigation Menu ends-->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
-    <style>
+    <div class="relative flex flex-col items-center justify-center py-12 bg-white bg-cover md:py-16 lg:py-24 min-w-screen tails-bg">
+    <div class="flex flex-col flex-col-reverse items-center justify-center p-10 mx-auto lg:flex-row lg:max-w-6xl lg:p-0">
+        <div class="container relative z-20 flex flex-col w-full px-5 pr-12 mb-16 text-2xl text-gray-700 lg:w-1/2 sm:px-0 md:px-10 sm:items-center lg:items-start lg:mb-0">
+            <h1 class="relative z-20 font-sans text-4xl font-extrabold leading-none text-black sm:text-5xl xl:text-6xl sm:text-center lg:text-left">
+                <span class="relative">
+                    <span class="absolute bottom-0 left-0 inline-block w-full h-4 mb-1 -ml-1 transform -skew-x-3 bg-blue-300"></span>
+                    <span class="relative">Learn Together,</span>
+                </span>
+                <span class="relative block text-blue-300">Grow Together.</span>
+            </h1>
+            <p class="relative z-20 block mt-6 text-base text-gray-500 xl:text-lg sm:text-center lg:text-left">Join our community and thrive with us! We can all help each other, learn together, and grow together.</p>
+
+            <ul>
+            <li class="flex items-center py-2 space-x-4 xl:py-3">
+              <svg class="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+              <span class="font-medium text-gray-500 text-base">Sign up</span>
+            </li>
+            <li class="flex items-center py-2 space-x-4 xl:py-3">
+              <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+              <span class="font-medium text-gray-500 text-base">Join a group</span>
+            </li>
+            <li class="flex items-center py-2 space-x-4 xl:py-3">
+              <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              <span class="font-medium text-gray-500 text-base">Grow together</span>
+            </li>
+          </ul>
+
+            <div class="relative flex items-center mt-10">
+                <a href="#_" class="flex items-center self-start justify-center px-5 py-3 text-base font-medium leading-tight text-white transition duration-150 ease-in-out bg-blue-600 border border-transparent rounded-lg shadow hover:bg-blue-800 focus:outline-none focus:border-blue-800 focus:shadow-outline-blue md:py-4 md:text-lg xl:text-xl md:px-10">Get Started</a>
+                <p class="relative flex inline-block h-full ml-5 text-base text-lg font-medium leading-tight text-gray-600 underline transition duration-150 ease-in-out border-transparent">Don't Worry, It's Free!</p>
+            </div>
+            <p class="mt-6 text-xs text-gray-500 rounded-full">Already a member? <a href="#_" class="font-medium text-blue-600 underline">Login Here</a></p>
+        </div>
+        <div class="relative w-full px-8 mb-12 rounded-lg cursor-pointer md:px-0 lg:mb-0 lg:pl-10 md:w-2/3 lg:w-1/2 group">
+            <div class="relative rounded-md">
+                <img src="img/groupstudy1.jpg"
+                    class="z-10 object-contain w-full h-full">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <section class="py-20 bg-gray-50">
+  <div class="container items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
+    <div class="flex flex-wrap items-center -mx-3">
+      <div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
+        <div class="w-full lg:max-w-md">
+          <h2 class="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading">Jam-packed with all the tools you need to succeed!</h2>
+          <p class="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6">It's never been easier to build a business of your own. Our tools will help you with the following:</p>
+          <ul>
+            <li class="flex items-center py-2 space-x-4 xl:py-3">
+              <svg class="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+              <span class="font-medium text-gray-500">Faster Processing and Delivery</span>
+            </li>
+            <li class="flex items-center py-2 space-x-4 xl:py-3">
+              <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+              <span class="font-medium text-gray-500">Out of the Box Tracking and Monitoring</span>
+            </li>
+            <li class="flex items-center py-2 space-x-4 xl:py-3">
+              <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              <span class="font-medium text-gray-500">100% Protection and Security for Your App</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0"><img class="mx-auto sm:max-w-sm lg:max-w-full" src="https://cdn.devdojo.com/images/november2020/feature-graphic.png" alt="feature image"></div>
+    </div>
+  </div>
+</section>
+ -->
+    <!-- <style>
     @import url('https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css');
     </style>
-    <section class="text-gray-700 body-font bg-cover bg-no-repeat" style="background-image: url(https://images.unsplash.com/photo-1607748669447-d80c72873e6b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80); height: 42rem; width:100%">
-        <div class="container px-8 mx-auto py-40 lg:px-4">
-            <div class="flex flex-col w-full mb-12 text-left lg:text-center">
-                <h1 class="mb-6 text-2xl font-semibold tracking-tighter text-white sm:text-6xl title-font">
+    <section class="body-font bg-cover bg-center bg-no-repeat" style="background-image: url(img/08_group-Bible-study.jpg); height: 38rem; width:100%">
+        <div class="container px-8 mx-auto py-40 lg:px-4 object-center">
+            <div class="flex flex-col w-full mb-10 text-left lg:text-center">
+                <h1 class="mb-6 text-2xl font-semibold tracking-tighter text-gray-100 sm:text-6xl title-font">
                 Growth Track
                 <br class="">
                 A place where you dont grow alone.
                 </h1>
-                <p class="mx-auto text-base font-medium leading-relaxed text-gray-200 lg:w-1/2">Growth Track
-                    with a wicked design.
-                    Professionally designed and 100% responsive static templates for startups and personal use.You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the landing page and testing a site. Instead, integrate one with your favourite framework.
-                . </p>
+               <p class="mx-auto text-lg italic font-semibold leading-relaxed text-gray-100 lg:w-1/2 pt-10">Growth Track
+                    is designed to help you learn and grow alongside people that are just like you. No one is perfect, and no one is always strong, but when we grow together under God, we dont need to be.</p>
             </div>
         </section>
         <section class="text-gray-600 body-font">
-            <div class="container px-5 py-24 mx-auto flex flex-wrap">
-                <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+            <div class="container px-5 py-22 mx-auto flex flex-wrap">
+                
+                <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto"> 
+
                     <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
                         <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
                     </div>
@@ -136,13 +205,13 @@
             </svg>
         </div>
         <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Neptune</h2>
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl pb-10">Neptune</h2>
             <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
         </div>
     </div>
 </div>
 </div>
-</section>
+</section> -->
 <!--Footer Starts-->
 <footer class="max-w-screen">
 <div class="px-4 py-12 mx-auto space-y-8 overflow-hidden bg-black max-w-screen sm:px-6 lg:px-8">
