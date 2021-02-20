@@ -50,8 +50,9 @@
           href="growth.html">Growth Track</a>
         <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
           href="aboutus.html">About Us</a>
-        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-          href="contact.html">Contact</a>
+       <!--  <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="contact.html">Contact</a> -->
+          <a class="typeform-share button" href="https://form.typeform.com/to/QBmz2plc?typeform-medium=embed-snippet" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#347BBD;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:17px;line-height:42.5px;text-align:center;margin:0;height:42.5px;padding:0px 28px;border-radius:21px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-size="100" data-hide-headers="true" data-hide-footer="true" target="_blank">Say Hello! </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
         <div @click.away="open = false" class="relative" x-data="{ open: false }">
           <!-- <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"> -->
         </div>
@@ -75,7 +76,7 @@
               <h1 class="text-6xl font-semibold text-white uppercase">
                 First Steps
               </h1>
-              <p class="mt-4 text-3xl text-gray-300">
+              <p class="mt-4 text-3xl text-gray-300 pb-6">
                 We are a growing church. <br> Come grow with us.
               </p>
             </div>
@@ -258,7 +259,7 @@
         </div>
       </div>
     </section>
-    <section class="relative block pb-20 bg-gray-900">
+    <!-- <section class="relative block pb-20 bg-gray-900">
       <div class="absolute top-0 left-0 right-0 bottom-auto w-full -mt-20 overflow-hidden pointer-events-none"
         style="height: 80px; transform: translateZ(0px)">
         <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
@@ -312,20 +313,20 @@
           </div>
         </div>
         <div class="container flex flex-wrap justify-center px-4 pt-16 mx-auto">
-        <form action="https://formspree.io/f/xleokawv" class="w-full max-w-lg ">
+        <form action="https://formcarry.com/s/vxUcLYCvlw" class="w-full max-w-lg" method="post">
           <div class="flex flex-wrap mb-6 -mx-3">
             <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
               <label class="block mb-2 text-xs font-bold tracking-wide text-white uppercase" for="grid-first-name">
                 First Name
               </label>
-              <input class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-red-500 rounded appearance-none focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane" name="name">
+              <input class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-red-500 rounded appearance-none focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane" name="firstName">
               <p class="text-xs italic text-red-500">Please fill out this field.</p>
             </div>
             <div class="w-full px-3 md:w-1/2">
-              <label class="block mb-2 text-xs font-bold tracking-wide text-white uppercase" for="grid-last-name" name="name">
+              <label class="block mb-2 text-xs font-bold tracking-wide text-white uppercase" for="grid-last-name">
                 Last Name
               </label>
-              <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
+              <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe" name="lastName" >
             </div>
           </div>
           <div class="flex flex-wrap mb-6 -mx-3">
@@ -333,15 +334,16 @@
               <label class="block mb-2 text-xs font-bold tracking-wide text-white uppercase" for="grid-password">
                 E-mail
               </label>
-              <input class="block w-full px-4 py-3 mb-3 leading-tight text-white bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email"placeholder="Janedoe@email.com" name="_replyto">
+              <input class="block w-full px-4 py-3 mb-3 leading-tight text-white bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email"placeholder="Janedoe@email.com" name="email">
             </div>
           </div>
           <div class="flex flex-wrap mb-6 -mx-3">
             <div class="w-full px-3">
               <label class="block mb-2 text-xs font-bold tracking-wide text-white uppercase" for="grid-password">
                 Message
-              </label>
+              </label><input type="hidden" name="_gotcha">
               <textarea class="block w-full h-48 px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none resize-none no-resize focus:outline-none focus:bg-white focus:border-gray-500" id="message"></textarea>
+              
             </div>
           </div>
           <div class="md:flex md:items-center">
@@ -355,7 +357,22 @@
         </form>
       </div>
       </div>
-    </section> 
+    </section>  -->
+    <section class="relative py-24 bg-white bg-bottom bg-cover" style="background-image:url('https://cdn.devdojo.com/images/december2020/cta-bg.jpeg')">
+  <div class="absolute inset-0 block w-full h-full opacity-25 bg-gradient-to-br from-transparent via-black to-transparent lg:hidden"></div>
+  <div class="flex flex-col items-center justify-between px-10 mx-auto max-w-7xl xl:px-12 lg:flex-row">
+
+
+    <div class="relative mb-6 lg:mb-0">
+    <h2 class="w-full mx-auto mb-2 text-4xl font-extrabold leading-none text-center text-white md:text-5xl xl:text-6xl lg:text-left">If you're ready, come say hello.</h2>
+    </div>
+    <!-- <a href="#_" class="relative flex-shrink-0 px-10 py-5 text-xl font-medium text-center text-white bg-blue-600 rounded-lg lg:text-2xl focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50 focus:outline-none">Sign Up Today</a> -->
+    <a class="typeform-share button elative flex-shrink-0 px-10 py-5 text-xl font-medium text-center text-white bg-blue-600 rounded-lg lg:text-2xl focus:ring-4 focus:ring-blue-600 focus:ring-opacity-50 focus:outline-none" href="https://form.typeform.com/to/QBmz2plc?typeform-medium=embed-snippet" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#347BBD;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:25px;line-height:50.5px;text-align:center;margin:0;height:50.5px;padding:0px 38px;border-radius:30px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-size="100" data-hide-headers="true" data-hide-footer="true" target="_blank">Say Hello! </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+
+  </div>
+
+</section>
+
   </main>
   
   <footer class="max-w-screen">
