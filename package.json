@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Siraquino-glitch/Practice#readme",
   "dependencies": {
     "autoprefixer": "^10.1.0",
-    "postcss": "^8.2.1",
+    "postcss": "^8.2.10",
     "tailwindcss": "^2.0.2"
   }
 }
